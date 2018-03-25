@@ -10,53 +10,10 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Openshift 테스트</title>
 </head>
 <body>
-<table border="1">
-<tr>
-<td>아이디</td>
-<td>비밀번호</td>
-<td>나이</td>
-<td>이름</td>
-</tr>
-<%
-Context ctx = null;
-DataSource ds = null;
-Connection con = null;
-Statement stmt = null;
-ResultSet rs = null;
-String sql = "select EMP_ID, EMP_Passwd, EMP_Age, EMP_Name from family";
-try {
-ctx = new InitialContext();
-ds = (DataSource)ctx.lookup("java:jboss/datasources/MySQLDS"); // --①
-con = ds.getConnection();
-stmt = con.createStatement();
-rs = stmt.executeQuery(sql);
-while(rs.next()) {
-%>
-<tr>
-<td><%= rs.getString("EMP_ID") %></td>
-<td><%= rs.getString("EMP_Passwd") %></td>
-<td><%= rs.getInt("EMP_Age") %></td>
-<td><%= rs.getString("EMP_Name") %></td>
-</tr>
-<%
-}
-} catch(Exception e) {
-e.printStackTrace();
-%>
-<tr>
-<td colspan="4">Error : <%= e.getMessage() %></td>
-</tr>
-<%
-} finally {
-if(rs != null) try { rs.close(); } catch(Exception ignore) {}
-if(stmt != null) try { stmt.close(); } catch(Exception ignore) {}
-if(con != null) try { con.close(); } catch(Exception ignore) {}
-}
-%>
-</table>
+Openshift 테스트입니다! 방가방가 ^_^
 </body>
 </html>
