@@ -14,6 +14,6 @@
 <title>Openshift 테스트</title>
 </head>
 <body>
-Openshift 테스트입니다! 방가방가 ^_^
+Openshift 테스트입니다! 방가방가! ^_^
 </body>
 </html>
