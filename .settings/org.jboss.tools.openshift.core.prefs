@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+org.jboss.tools.openshift.Connection=https\://gladiator67%40naver.com@api.starter-us-west-1.openshift.com
+org.jboss.tools.openshift.DeployProject=CloudTestWeb
+org.jboss.tools.openshift.PodPath=/wildfly/standalone/deployments
+org.jboss.tools.openshift.Service=josephopenshiftproject@josephwildflyproject
+org.jboss.tools.openshift.SourcePath=${workspace_loc\:/CloudTestWeb}
